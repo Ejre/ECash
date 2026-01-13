@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:intl/intl.dart';
 import 'settings_controller.dart';
 import '../setup/setup_screen.dart'; // For redirect after reset
@@ -54,14 +54,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Edit Anggaran Bulan Ini", style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+            Text("Edit Anggaran Bulan Ini", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
             const SizedBox(height: 24),
             
-            Text("Gaji Bulanan (Rp)", style: GoogleFonts.outfit(color: Colors.white70)),
+            Text("Gaji Bulanan (Rp)", style: TextStyle(fontFamily: 'Outfit',color: Colors.white70)),
             TextField(
               controller: _salaryController,
               keyboardType: TextInputType.number,
-              style: GoogleFonts.outfit(color: Colors.white, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.bold),
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Theme.of(context).cardTheme.color,
@@ -69,11 +69,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ),
             ),
             const SizedBox(height: 16),
-             Text("Target Tabungan (Rp)", style: GoogleFonts.outfit(color: Colors.white70)),
+             Text("Target Tabungan (Rp)", style: TextStyle(fontFamily: 'Outfit',color: Colors.white70)),
             TextField(
               controller: _savingsController,
               keyboardType: TextInputType.number,
-                 style: GoogleFonts.outfit(color: Colors.white, fontWeight: FontWeight.bold),
+                 style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.bold),
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Theme.of(context).cardTheme.color,
@@ -98,7 +98,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             const Divider(color: Colors.white24),
             const SizedBox(height: 24),
             
-            Text("Zona Bahaya", style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.redAccent)),
+            Text("Zona Bahaya", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.bold, color: Colors.redAccent)),
             const SizedBox(height: 16),
             Container(
               padding: const EdgeInsets.all(16),
@@ -111,7 +111,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 children: [
                    Text(
                      "Reset Data akan menghapus semua riwayat transaksi dan pengaturan anggaran bulan ini.", 
-                     style: GoogleFonts.outfit(color: Colors.white70),
+                     style: TextStyle(fontFamily: 'Outfit',color: Colors.white70),
                      textAlign: TextAlign.center,
                    ),
                    const SizedBox(height: 16),
@@ -155,7 +155,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
             
             const SizedBox(height: 32),
-            Text("Manajemen Data", style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+            Text("Manajemen Data", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
             const SizedBox(height: 16),
             Container(
               decoration: BoxDecoration(
@@ -166,8 +166,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 children: [
                   ListTile(
                     leading: const Icon(Icons.download_rounded, color: Colors.blueAccent),
-                    title: Text("Backup Data", style: GoogleFonts.outfit(color: Colors.white)),
-                    subtitle: Text("Simpan data ke file (Drive/WA)", style: GoogleFonts.outfit(color: Colors.white54, fontSize: 12)),
+                    title: Text("Backup Data", style: TextStyle(fontFamily: 'Outfit',color: Colors.white)),
+                    subtitle: Text("Simpan data ke file (Drive/WA)", style: TextStyle(fontFamily: 'Outfit',color: Colors.white54, fontSize: 12)),
                     onTap: () async {
                        try {
                          await ref.read(settingsControllerProvider.notifier).exportData();
@@ -181,8 +181,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   const Divider(height: 1, color: Colors.white10),
                   ListTile(
                     leading: const Icon(Icons.upload_rounded, color: Colors.orangeAccent),
-                    title: Text("Restore Data", style: GoogleFonts.outfit(color: Colors.white)),
-                    subtitle: Text("Kembalikan data dari file backup", style: GoogleFonts.outfit(color: Colors.white54, fontSize: 12)),
+                    title: Text("Restore Data", style: TextStyle(fontFamily: 'Outfit',color: Colors.white)),
+                    subtitle: Text("Kembalikan data dari file backup", style: TextStyle(fontFamily: 'Outfit',color: Colors.white54, fontSize: 12)),
                     onTap: () async {
                       final confirm = await showDialog<bool>(
                         context: context, 
@@ -220,7 +220,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             
             const SizedBox(height: 48),
             Center(
-               child: Text("Ver 1.0.0", style: GoogleFonts.outfit(color: Colors.grey[700])),
+               child: Text("Ver 1.0.0", style: TextStyle(fontFamily: 'Outfit',color: Colors.grey[700])),
             )
           ],
         ),

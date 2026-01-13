@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import '../../utils/currency_input_formatter.dart';
 import 'setup_controller.dart';
 import '../display/root_wrapper.dart';
@@ -61,7 +61,7 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                    const SizedBox(height: 24),
                    Text(
                      'Halo, Bos!',
-                     style: GoogleFonts.outfit( // Use GoogleFonts
+                     style: TextStyle(fontFamily: 'Outfit', // Use GoogleFonts
                        fontSize: 28, // Explicit size
                        fontWeight: FontWeight.bold,
                        color: Colors.white, // Explicit White
@@ -71,7 +71,7 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                    const SizedBox(height: 8),
                    Text(
                      'Yuk atur keuangan bulan ini biar nggak boncos.',
-                     style: GoogleFonts.outfit(
+                     style: TextStyle(fontFamily: 'Outfit',
                        fontSize: 16,
                        color: Colors.white.withOpacity(0.9), // High visibility
                      ),
@@ -83,14 +83,14 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                       controller: _salaryController,
                       keyboardType: TextInputType.number,
                       inputFormatters: [CurrencyInputFormatter()],
-                      style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+                      style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
                       decoration: InputDecoration(
                         labelText: 'Total Gaji Bulan Ini',
-                        labelStyle: GoogleFonts.outfit(color: Colors.white70),
+                        labelStyle: TextStyle(fontFamily: 'Outfit',color: Colors.white70),
                         prefixText: 'Rp ',
-                        prefixStyle: GoogleFonts.outfit(color: Colors.white, fontWeight: FontWeight.bold),
+                        prefixStyle: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.bold),
                         hintText: '0',
-                        hintStyle: GoogleFonts.outfit(color: Colors.white30),
+                        hintStyle: TextStyle(fontFamily: 'Outfit',color: Colors.white30),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: const BorderSide(color: Colors.white24),
@@ -112,14 +112,14 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                       controller: _savingsController,
                       keyboardType: TextInputType.number,
                       inputFormatters: [CurrencyInputFormatter()],
-                      style: GoogleFonts.outfit(fontSize: 18, color: Colors.white),
+                      style: TextStyle(fontFamily: 'Outfit',fontSize: 18, color: Colors.white),
                       decoration: InputDecoration(
                         labelText: 'Tabungan Awal (Opsional)',
-                        labelStyle: GoogleFonts.outfit(color: Colors.white70),
+                        labelStyle: TextStyle(fontFamily: 'Outfit',color: Colors.white70),
                         prefixText: 'Rp ',
-                        prefixStyle: GoogleFonts.outfit(color: Colors.white, fontWeight: FontWeight.bold),
+                        prefixStyle: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.bold),
                         hintText: '0',
-                        hintStyle: GoogleFonts.outfit(color: Colors.white30),
+                        hintStyle: TextStyle(fontFamily: 'Outfit',color: Colors.white30),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: const BorderSide(color: Colors.white24),

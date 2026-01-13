@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class OverviewCard extends StatelessWidget {
   final double income;
@@ -43,7 +43,7 @@ class OverviewCard extends StatelessWidget {
           children: [
             Text(
               'Sisa Uang Kamu',
-              style: GoogleFonts.outfit(
+              style: TextStyle(fontFamily: 'Outfit',
                 color: Colors.white, // Full White
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
@@ -52,7 +52,7 @@ class OverviewCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               currencyFormat.format(balance),
-              style: GoogleFonts.outfit(
+              style: TextStyle(fontFamily: 'Outfit',
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 36,
@@ -69,13 +69,13 @@ class OverviewCard extends StatelessWidget {
                         children: [
                           const Icon(Icons.arrow_circle_up, color: Color(0xFF81C784), size: 18), // Light Green
                           const SizedBox(width: 4),
-                          Text('Pemasukan', style: GoogleFonts.outfit(color: Colors.white.withOpacity(0.9), fontSize: 14, fontWeight: FontWeight.w500)),
+                          Text('Pemasukan', style: TextStyle(fontFamily: 'Outfit',color: Colors.white.withOpacity(0.9), fontSize: 14, fontWeight: FontWeight.w500)),
                         ],
                       ),
                       const SizedBox(height: 4),
                       Text(
                         currencyFormat.format(income),
-                        style: GoogleFonts.outfit(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+                        style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
                       ),
                     ],
                   ),
@@ -89,13 +89,13 @@ class OverviewCard extends StatelessWidget {
                         children: [
                           const Icon(Icons.arrow_circle_down, color: Color(0xFFE57373), size: 18), // Light Red
                           const SizedBox(width: 4),
-                          Text('Pengeluaran', style: GoogleFonts.outfit(color: Colors.white.withOpacity(0.9), fontSize: 14, fontWeight: FontWeight.w500)),
+                          Text('Pengeluaran', style: TextStyle(fontFamily: 'Outfit',color: Colors.white.withOpacity(0.9), fontSize: 14, fontWeight: FontWeight.w500)),
                         ],
                       ),
                       const SizedBox(height: 4),
                       Text(
                         currencyFormat.format(expenses),
-                        style: GoogleFonts.outfit(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+                        style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
                       ),
                     ],
                   ),

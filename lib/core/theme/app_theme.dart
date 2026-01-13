@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   // Ultra-Premium Color Palette
@@ -26,36 +25,40 @@ class AppTheme {
       ),
       scaffoldBackgroundColor: _backgroundLight,
       splashFactory: InkRipple.splashFactory, // Premium Touch
+      fontFamily: 'Outfit', // Global Font
       pageTransitionsTheme: const PageTransitionsTheme(
         builders: {
           TargetPlatform.android: ZoomPageTransitionsBuilder(),
           TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
         }
       ),
-      textTheme: GoogleFonts.outfitTextTheme(ThemeData.light().textTheme).apply(
+      // textTheme: GoogleFonts.outfitTextTheme(ThemeData.light().textTheme).apply(
+      //   bodyColor: Colors.black87,
+      //   displayColor: _primary,
+      // ).copyWith(
+      //    // HD Typography Tweaks
+      //    titleLarge: GoogleFonts.outfit(letterSpacing: -0.5), 
+      //    bodyMedium: GoogleFonts.outfit(letterSpacing: 0.2),
+      // ),
+      textTheme: ThemeData.light().textTheme.apply(
+        fontFamily: 'Outfit',
         bodyColor: Colors.black87,
         displayColor: _primary,
       ).copyWith(
-         // HD Typography Tweaks
-         titleLarge: GoogleFonts.outfit(letterSpacing: -0.5), 
-         bodyMedium: GoogleFonts.outfit(letterSpacing: 0.2),
+         titleLarge: const TextStyle(fontFamily: 'Outfit', letterSpacing: -0.5, fontSize: 22, fontWeight: FontWeight.w500), 
+         bodyMedium: const TextStyle(fontFamily: 'Outfit', letterSpacing: 0.2),
       ),
-      // cardTheme: CardTheme(
-      //   elevation: 0,
-      //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      //   color: _surfaceLight,
-      //   margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      // ),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: _backgroundLight,
         elevation: 0,
         centerTitle: false,
-        titleTextStyle: GoogleFonts.outfit(
+        titleTextStyle: TextStyle(
+          fontFamily: 'Outfit',
           color: Colors.black87,
           fontSize: 24, // Bigger
           fontWeight: FontWeight.w800, // Extra Bold
         ),
-        iconTheme: const IconThemeData(color: Colors.black87),
+        iconTheme: IconThemeData(color: Colors.black87),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -73,7 +76,7 @@ class AppTheme {
           borderSide: const BorderSide(color: _primary, width: 2),
         ),
         contentPadding: const EdgeInsets.all(16),
-        labelStyle: GoogleFonts.outfit(color: Colors.grey[600]),
+        labelStyle: TextStyle(fontFamily: 'Outfit', color: Colors.grey[600]),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -82,7 +85,8 @@ class AppTheme {
           elevation: 0,
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          textStyle: GoogleFonts.outfit(
+          textStyle: const TextStyle(
+            fontFamily: 'Outfit',
             fontSize: 16,
             fontWeight: FontWeight.bold,
           ),
@@ -112,12 +116,13 @@ class AppTheme {
           TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
         }
       ),
-      textTheme: GoogleFonts.outfitTextTheme(ThemeData.dark().textTheme).apply(
+      textTheme: ThemeData.dark().textTheme.apply(
+        fontFamily: 'Outfit',
         bodyColor: Colors.white, // High Contrast (was white70)
         displayColor: _primary, 
       ).copyWith(
-         titleLarge: GoogleFonts.outfit(letterSpacing: -0.5), 
-         bodyMedium: GoogleFonts.outfit(letterSpacing: 0.2),
+         titleLarge: const TextStyle(fontFamily: 'Outfit', letterSpacing: -0.5, fontSize: 22, fontWeight: FontWeight.w500), 
+         bodyMedium: const TextStyle(fontFamily: 'Outfit', letterSpacing: 0.2),
       ),
       cardTheme: CardThemeData(
         elevation: 0,
@@ -128,16 +133,17 @@ class AppTheme {
         color: _surfaceDark,
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       ),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: _backgroundDark,
         elevation: 0,
         centerTitle: false,
-        titleTextStyle: GoogleFonts.outfit(
+        titleTextStyle: TextStyle(
+          fontFamily: 'Outfit',
           color: Colors.white,
           fontSize: 24, 
           fontWeight: FontWeight.w800, 
         ),
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -154,9 +160,9 @@ class AppTheme {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: _primary, width: 2),
         ),
-        hintStyle: GoogleFonts.outfit(color: Colors.white38), // Sharper hint
+        hintStyle: TextStyle(fontFamily: 'Outfit',color: Colors.white38), // Sharper hint
         contentPadding: const EdgeInsets.all(16),
-        labelStyle: GoogleFonts.outfit(color: Colors.white70), // Sharper label
+        labelStyle: TextStyle(fontFamily: 'Outfit',color: Colors.white70), // Sharper label
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -165,7 +171,8 @@ class AppTheme {
           elevation: 0,
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          textStyle: GoogleFonts.outfit(
+          textStyle: const TextStyle(
+            fontFamily: 'Outfit',
             fontSize: 16,
             fontWeight: FontWeight.bold,
           ),

@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:intl/intl.dart';
 import '../history/transaction_history_screen.dart';
 import '../../../../data/local/database.dart';
@@ -17,7 +17,7 @@ class StatisticsScreen extends ConsumerWidget {
       data: (transactions) {
         if (transactions.isEmpty) {
           return Center(
-            child: Text("Belum ada data", style: GoogleFonts.outfit(color: Colors.grey)),
+            child: Text("Belum ada data", style: TextStyle(fontFamily: 'Outfit',color: Colors.grey)),
           );
         }
 
@@ -40,7 +40,7 @@ class StatisticsScreen extends ConsumerWidget {
             value: entry.value,
             title: '${percentage.toStringAsFixed(0)}%',
             radius: 60, // Thicker radius
-            titleStyle: GoogleFonts.outfit(
+            titleStyle: TextStyle(fontFamily: 'Outfit',
               fontSize: 14, 
               fontWeight: FontWeight.bold, 
               color: Colors.white,
@@ -54,11 +54,11 @@ class StatisticsScreen extends ConsumerWidget {
           padding: const EdgeInsets.all(24),
           child: Column(
             children: [
-              Text("Total Pengeluaran", style: GoogleFonts.outfit(color: Colors.grey)),
+              Text("Total Pengeluaran", style: TextStyle(fontFamily: 'Outfit',color: Colors.grey)),
               const SizedBox(height: 8),
               Text(
                 currencyFormat.format(totalExpenses),
-                style: GoogleFonts.outfit(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(fontFamily: 'Outfit',fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               const SizedBox(height: 32),
               SizedBox(
@@ -89,13 +89,13 @@ class StatisticsScreen extends ConsumerWidget {
                        ),
                        const SizedBox(width: 12),
                        Expanded(
-                         child: Text(entry.key, style: GoogleFonts.outfit(fontSize: 16)),
+                         child: Text(entry.key, style: TextStyle(fontFamily: 'Outfit',fontSize: 16)),
                        ),
                        Column(
                          crossAxisAlignment: CrossAxisAlignment.end,
                          children: [
-                           Text(currencyFormat.format(entry.value), style: GoogleFonts.outfit(fontWeight: FontWeight.bold)),
-                           Text('${percentage.toStringAsFixed(1)}%', style: GoogleFonts.outfit(fontSize: 12, color: Colors.grey)),
+                           Text(currencyFormat.format(entry.value), style: TextStyle(fontFamily: 'Outfit',fontWeight: FontWeight.bold)),
+                           Text('${percentage.toStringAsFixed(1)}%', style: TextStyle(fontFamily: 'Outfit',fontSize: 12, color: Colors.grey)),
                          ],
                        ),
                      ],

@@ -40,7 +40,6 @@ dependencies:
   path: ^1.9.1
   flutter_riverpod: ^2.5.1
   riverpod_annotation: ^2.3.5
-  google_fonts: ^7.0.0
   intl: ^0.20.2
   fl_chart: ^1.1.1
   share_plus: ^9.0.0
@@ -56,6 +55,8 @@ dev_dependencies:
   riverpod_generator: ^2.4.0
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.3.7
+
+
 
 flutter_icons:
   android: "launcher_icon"
@@ -81,6 +82,14 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  fonts:
+    - family: Outfit
+      fonts:
+        - asset: assets/fonts/Outfit-Variable.ttf
+    - family: RobotoMono
+      fonts:
+        - asset: assets/fonts/RobotoMono-Regular.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:

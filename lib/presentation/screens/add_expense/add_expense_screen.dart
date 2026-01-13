@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../utils/currency_input_formatter.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:intl/intl.dart';
 import 'add_expense_controller.dart';
 import '../../../data/local/database.dart';
@@ -88,7 +88,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         alignment: Alignment.center,
-                        child: Text("Pengeluaran", style: GoogleFonts.outfit(fontWeight: FontWeight.bold, color: Colors.white)),
+                        child: Text("Pengeluaran", style: TextStyle(fontFamily: 'Outfit',fontWeight: FontWeight.bold, color: Colors.white)),
                       ),
                     ),
                   ),
@@ -105,7 +105,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         alignment: Alignment.center,
-                        child: Text("Pemasukan", style: GoogleFonts.outfit(fontWeight: FontWeight.bold, color: Colors.white)),
+                        child: Text("Pemasukan", style: TextStyle(fontFamily: 'Outfit',fontWeight: FontWeight.bold, color: Colors.white)),
                       ),
                     ),
                   ),
@@ -114,20 +114,20 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen> {
             ),
             const SizedBox(height: 24),
 
-            Text("Nominal (Rp)", style: GoogleFonts.outfit(fontSize: 14, color: Colors.white70)), // Brighter
+            Text("Nominal (Rp)", style: TextStyle(fontFamily: 'Outfit',fontSize: 14, color: Colors.white70)), // Brighter
             TextField(
               controller: _amountController,
               keyboardType: TextInputType.number,
               inputFormatters: [CurrencyInputFormatter()],
-              style: GoogleFonts.outfit(fontSize: 32, fontWeight: FontWeight.bold, color: _isExpense ? Colors.redAccent : Colors.greenAccent), 
+              style: TextStyle(fontFamily: 'Outfit',fontSize: 32, fontWeight: FontWeight.bold, color: _isExpense ? Colors.redAccent : Colors.greenAccent), 
               decoration: InputDecoration(
                 hintText: "0",
-                hintStyle: GoogleFonts.outfit(color: Colors.grey[600]), // Hint distinct but visible
+                hintStyle: TextStyle(fontFamily: 'Outfit',color: Colors.grey[600]), // Hint distinct but visible
                 border: InputBorder.none,
                 enabledBorder: InputBorder.none,
                 focusedBorder: InputBorder.none,
                 prefixText: _isExpense ? "- " : "+ ",
-                prefixStyle: GoogleFonts.outfit(fontSize: 32, fontWeight: FontWeight.bold, color: _isExpense ? Colors.redAccent : Colors.greenAccent),
+                prefixStyle: TextStyle(fontFamily: 'Outfit',fontSize: 32, fontWeight: FontWeight.bold, color: _isExpense ? Colors.redAccent : Colors.greenAccent),
               ),
               cursorColor: Theme.of(context).colorScheme.primary, 
               autofocus: true,
@@ -135,7 +135,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen> {
             const Divider(color: Colors.white24), // Visible divider
             const SizedBox(height: 24),
  
-            Text("Kategori", style: GoogleFonts.outfit(fontSize: 14, color: Colors.white70)),
+            Text("Kategori", style: TextStyle(fontFamily: 'Outfit',fontSize: 14, color: Colors.white70)),
             const SizedBox(height: 8),
             Wrap(
               spacing: 8,
@@ -157,7 +157,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen> {
                       width: 1.5,
                     ),
                   ),
-                  labelStyle: GoogleFonts.outfit(
+                  labelStyle: TextStyle(fontFamily: 'Outfit',
                     color: isSelected ? Colors.white : Colors.white70, // White / White70 for unselected (very bright)
                     fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
                   ),
@@ -167,14 +167,14 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen> {
             ),
             const SizedBox(height: 24),
 
-            Text("Catatan (Opsional)", style: GoogleFonts.outfit(fontSize: 14, color: Colors.white70)),
+            Text("Catatan (Opsional)", style: TextStyle(fontFamily: 'Outfit',fontSize: 14, color: Colors.white70)),
             const SizedBox(height: 8),
             TextField(
               controller: _noteController,
-              style: GoogleFonts.outfit(color: Colors.white), // Input white
+              style: TextStyle(fontFamily: 'Outfit',color: Colors.white), // Input white
               decoration: InputDecoration(
                 hintText: "Contoh: Nasi Padang",
-                hintStyle: GoogleFonts.outfit(color: Colors.grey[500]),
+                hintStyle: TextStyle(fontFamily: 'Outfit',color: Colors.grey[500]),
                 filled: true,
                 fillColor: Theme.of(context).cardTheme.color, // Card color background for input
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
@@ -182,7 +182,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen> {
             ),
             const SizedBox(height: 24),
 
-            Text("Tanggal", style: GoogleFonts.outfit(fontSize: 14, color: Colors.white70)),
+            Text("Tanggal", style: TextStyle(fontFamily: 'Outfit',fontSize: 14, color: Colors.white70)),
             const SizedBox(height: 8),
             InkWell(
               onTap: () async {
@@ -221,7 +221,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen> {
                     const SizedBox(width: 8),
                     Text(
                       DateFormat('EEEE, d MMMM yyyy').format(_selectedDate),
-                      style: GoogleFonts.outfit(fontWeight: FontWeight.w500, color: Colors.white),
+                      style: TextStyle(fontFamily: 'Outfit',fontWeight: FontWeight.w500, color: Colors.white),
                     ),
                   ],
                 ),

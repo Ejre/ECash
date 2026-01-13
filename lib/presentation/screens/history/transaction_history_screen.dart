@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import '../../providers/database_provider.dart';
 import '../../widgets/transaction_tile.dart';
 import '../../../data/local/database.dart';
@@ -30,7 +30,7 @@ class TransactionHistoryScreen extends ConsumerWidget {
           title: const Text('Riwayat Transaksi'),
           centerTitle: true,
           bottom: TabBar(
-            labelStyle: GoogleFonts.outfit(fontWeight: FontWeight.bold),
+            labelStyle: TextStyle(fontFamily: 'Outfit',fontWeight: FontWeight.bold),
             unselectedLabelColor: Colors.grey,
             labelColor: Theme.of(context).colorScheme.primary,
             indicatorColor: Theme.of(context).colorScheme.primary,
@@ -52,7 +52,7 @@ class TransactionHistoryScreen extends ConsumerWidget {
                       children: [
                          Icon(Icons.history, size: 64, color: Colors.grey[700]),
                          const SizedBox(height: 16),
-                         Text("Belum ada riwayat", style: GoogleFonts.outfit(color: Colors.grey[500], fontSize: 16)),
+                         Text("Belum ada riwayat", style: TextStyle(fontFamily: 'Outfit',color: Colors.grey[500], fontSize: 16)),
                       ],
                     ),
                   );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'dashboard_controller.dart';
 import '../../widgets/overview_card.dart';
 import '../../widgets/expense_progress_bar.dart';
@@ -68,7 +68,7 @@ class DashboardScreen extends ConsumerWidget {
                              // Navigate to History Screen
                              Navigator.push(context, MaterialPageRoute(builder: (c) => const TransactionHistoryScreen()));
                            },
-                           child: Text("Lihat Semua", style: GoogleFonts.outfit(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold)),
+                           child: Text("Lihat Semua", style: TextStyle(fontFamily: 'Outfit',color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold)),
                          ),
                      ],
                    ),
@@ -86,7 +86,7 @@ class DashboardScreen extends ConsumerWidget {
                               children: [
                                 Icon(Icons.receipt_long, size: 48, color: Colors.grey[400]),
                                 const SizedBox(height: 8),
-                                Text('Belum ada transaksi', style: GoogleFonts.outfit(color: Colors.grey[400], fontSize: 16, fontWeight: FontWeight.w500)),
+                                Text('Belum ada transaksi', style: TextStyle(fontFamily: 'Outfit',color: Colors.grey[400], fontSize: 16, fontWeight: FontWeight.w500)),
                               ],
                             ),
                           );

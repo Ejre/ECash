@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:intl/intl.dart';
 import '../../data/local/database.dart';
 
@@ -41,7 +41,7 @@ class TransactionTile extends StatelessWidget {
               children: [
                 Text(
                   transaction.category,
-                  style: GoogleFonts.outfit(
+                  style: TextStyle(fontFamily: 'Outfit',
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
@@ -51,7 +51,7 @@ class TransactionTile extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     transaction.note!,
-                    style: GoogleFonts.outfit(
+                    style: TextStyle(fontFamily: 'Outfit',
                       color: Colors.white, // Full White
                       fontSize: 14,
                     ),
@@ -67,7 +67,7 @@ class TransactionTile extends StatelessWidget {
             children: [
               Text(
                 "${transaction.isExpense ? '-' : '+'} ${currencyFormat.format(transaction.amount)}",
-                style: GoogleFonts.outfit(
+                style: TextStyle(fontFamily: 'Outfit',
                   color: transaction.isExpense ? const Color(0xFFFF8A80) : const Color(0xFF69F0AE), // Red vs Green
                   fontWeight: FontWeight.bold,
                   fontSize: 14,
@@ -76,7 +76,7 @@ class TransactionTile extends StatelessWidget {
               const SizedBox(height: 4),
               Text(
                 DateFormat('d MMM').format(transaction.date), // Date
-                style: GoogleFonts.outfit(
+                style: TextStyle(fontFamily: 'Outfit',
                   color: Colors.white70, // Sharp White70
                   fontSize: 12,
                 ),
