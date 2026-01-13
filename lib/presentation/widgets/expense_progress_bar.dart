@@ -31,12 +31,12 @@ class ExpenseProgressBar extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Status Pengeluaran", style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.w500)),
+                Text("Status Pengeluaran", style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.w600)),
                 Text(
                   "${(percentage * 100).toStringAsFixed(1)}%",
                   style: TextStyle(fontFamily: 'Outfit',
                     color: percentage > 0.8 ? const Color(0xFFE57373) : const Color(0xFF81C784), // Red if > 80%
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w800, // Bold -> ExtraBold
                   ),
                 ),
               ],
@@ -55,7 +55,7 @@ class ExpenseProgressBar extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               percentage > 0.8 ? "Hati-hati, pengeluaranmu tinggi!" : "Masih aman bos.", // Updated text
-              style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontSize: 13, fontWeight: FontWeight.normal), // Full White
+              style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontSize: 13, fontWeight: FontWeight.w500), // Normal -> Medium
             ),
           ],
         ),

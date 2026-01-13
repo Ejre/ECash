@@ -54,14 +54,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Edit Anggaran Bulan Ini", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+            Text("Edit Anggaran Bulan Ini", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white)),
             const SizedBox(height: 24),
             
-            Text("Gaji Bulanan (Rp)", style: TextStyle(fontFamily: 'Outfit',color: Colors.white70)),
+            Text("Gaji Bulanan (Rp)", style: TextStyle(fontFamily: 'Outfit',color: Colors.white70, fontWeight: FontWeight.w500)),
             TextField(
               controller: _salaryController,
               keyboardType: TextInputType.number,
-              style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.w800),
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Theme.of(context).cardTheme.color,
@@ -69,11 +69,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ),
             ),
             const SizedBox(height: 16),
-             Text("Target Tabungan (Rp)", style: TextStyle(fontFamily: 'Outfit',color: Colors.white70)),
+             Text("Target Tabungan (Rp)", style: TextStyle(fontFamily: 'Outfit',color: Colors.white70, fontWeight: FontWeight.w500)),
             TextField(
               controller: _savingsController,
               keyboardType: TextInputType.number,
-                 style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.bold),
+                 style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.w800),
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Theme.of(context).cardTheme.color,
@@ -98,7 +98,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             const Divider(color: Colors.white24),
             const SizedBox(height: 24),
             
-            Text("Zona Bahaya", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.bold, color: Colors.redAccent)),
+            Text("Zona Bahaya", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.w800, color: Colors.redAccent)),
             const SizedBox(height: 16),
             Container(
               padding: const EdgeInsets.all(16),
@@ -155,7 +155,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
             
             const SizedBox(height: 32),
-            Text("Manajemen Data", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+            Text("Manajemen Data", style: TextStyle(fontFamily: 'Outfit',fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white)),
             const SizedBox(height: 16),
             Container(
               decoration: BoxDecoration(
@@ -166,7 +166,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 children: [
                   ListTile(
                     leading: const Icon(Icons.download_rounded, color: Colors.blueAccent),
-                    title: Text("Backup Data", style: TextStyle(fontFamily: 'Outfit',color: Colors.white)),
+                    title: Text("Backup Data", style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.w600)),
                     subtitle: Text("Simpan data ke file (Drive/WA)", style: TextStyle(fontFamily: 'Outfit',color: Colors.white54, fontSize: 12)),
                     onTap: () async {
                        try {
@@ -181,7 +181,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   const Divider(height: 1, color: Colors.white10),
                   ListTile(
                     leading: const Icon(Icons.upload_rounded, color: Colors.orangeAccent),
-                    title: Text("Restore Data", style: TextStyle(fontFamily: 'Outfit',color: Colors.white)),
+                    title: Text("Restore Data", style: TextStyle(fontFamily: 'Outfit',color: Colors.white, fontWeight: FontWeight.w600)),
                     subtitle: Text("Kembalikan data dari file backup", style: TextStyle(fontFamily: 'Outfit',color: Colors.white54, fontSize: 12)),
                     onTap: () async {
                       final confirm = await showDialog<bool>(

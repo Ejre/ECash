@@ -68,7 +68,7 @@ class DashboardScreen extends ConsumerWidget {
                              // Navigate to History Screen
                              Navigator.push(context, MaterialPageRoute(builder: (c) => const TransactionHistoryScreen()));
                            },
-                           child: Text("Lihat Semua", style: TextStyle(fontFamily: 'Outfit',color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold)),
+                           child: Text("Lihat Semua", style: TextStyle(fontFamily: 'Outfit',color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.w800)),
                          ),
                      ],
                    ),
@@ -86,7 +86,7 @@ class DashboardScreen extends ConsumerWidget {
                               children: [
                                 Icon(Icons.receipt_long, size: 48, color: Colors.grey[400]),
                                 const SizedBox(height: 8),
-                                Text('Belum ada transaksi', style: TextStyle(fontFamily: 'Outfit',color: Colors.grey[400], fontSize: 16, fontWeight: FontWeight.w500)),
+                                Text('Belum ada transaksi', style: TextStyle(fontFamily: 'Outfit',color: Colors.grey[400], fontSize: 16, fontWeight: FontWeight.w600)),
                               ],
                             ),
                           );

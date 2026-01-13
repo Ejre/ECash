@@ -42,7 +42,7 @@ class StatisticsScreen extends ConsumerWidget {
             radius: 60, // Thicker radius
             titleStyle: TextStyle(fontFamily: 'Outfit',
               fontSize: 14, 
-              fontWeight: FontWeight.bold, 
+              fontWeight: FontWeight.w800, // Bold -> ExtraBold
               color: Colors.white,
             ),
           );
@@ -54,11 +54,11 @@ class StatisticsScreen extends ConsumerWidget {
           padding: const EdgeInsets.all(24),
           child: Column(
             children: [
-              Text("Total Pengeluaran", style: TextStyle(fontFamily: 'Outfit',color: Colors.grey)),
+              Text("Total Pengeluaran", style: TextStyle(fontFamily: 'Outfit',color: Colors.grey, fontWeight: FontWeight.w500)),
               const SizedBox(height: 8),
               Text(
                 currencyFormat.format(totalExpenses),
-                style: TextStyle(fontFamily: 'Outfit',fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(fontFamily: 'Outfit',fontSize: 24, fontWeight: FontWeight.w800, color: Colors.white),
               ),
               const SizedBox(height: 32),
               SizedBox(
@@ -94,8 +94,8 @@ class StatisticsScreen extends ConsumerWidget {
                        Column(
                          crossAxisAlignment: CrossAxisAlignment.end,
                          children: [
-                           Text(currencyFormat.format(entry.value), style: TextStyle(fontFamily: 'Outfit',fontWeight: FontWeight.bold)),
-                           Text('${percentage.toStringAsFixed(1)}%', style: TextStyle(fontFamily: 'Outfit',fontSize: 12, color: Colors.grey)),
+                           Text(currencyFormat.format(entry.value), style: TextStyle(fontFamily: 'Outfit',fontWeight: FontWeight.w800)),
+                           Text('${percentage.toStringAsFixed(1)}%', style: TextStyle(fontFamily: 'Outfit',fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500)),
                          ],
                        ),
                      ],

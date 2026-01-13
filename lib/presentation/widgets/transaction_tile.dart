@@ -43,7 +43,7 @@ class TransactionTile extends StatelessWidget {
                   transaction.category,
                   style: TextStyle(fontFamily: 'Outfit',
                     color: Colors.white,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w800, // Bold -> ExtraBold
                     fontSize: 16,
                   ),
                 ),
@@ -54,6 +54,7 @@ class TransactionTile extends StatelessWidget {
                     style: TextStyle(fontFamily: 'Outfit',
                       color: Colors.white, // Full White
                       fontSize: 14,
+                      fontWeight: FontWeight.w500, // Normal -> Medium
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -69,7 +70,7 @@ class TransactionTile extends StatelessWidget {
                 "${transaction.isExpense ? '-' : '+'} ${currencyFormat.format(transaction.amount)}",
                 style: TextStyle(fontFamily: 'Outfit',
                   color: transaction.isExpense ? const Color(0xFFFF8A80) : const Color(0xFF69F0AE), // Red vs Green
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w800, // Bold -> ExtraBold
                   fontSize: 14,
                 ),
               ),
@@ -79,6 +80,7 @@ class TransactionTile extends StatelessWidget {
                 style: TextStyle(fontFamily: 'Outfit',
                   color: Colors.white70, // Sharp White70
                   fontSize: 12,
+                  fontWeight: FontWeight.w500, // Normal -> Medium
                 ),
               ),
             ],

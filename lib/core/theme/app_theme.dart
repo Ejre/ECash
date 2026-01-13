@@ -56,7 +56,7 @@ class AppTheme {
           fontFamily: 'Outfit',
           color: Colors.black87,
           fontSize: 24, // Bigger
-          fontWeight: FontWeight.w800, // Extra Bold
+          fontWeight: FontWeight.w900, // Extra Bold -> Black
         ),
         iconTheme: IconThemeData(color: Colors.black87),
       ),
@@ -88,7 +88,7 @@ class AppTheme {
           textStyle: const TextStyle(
             fontFamily: 'Outfit',
             fontSize: 16,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w800, // Bold -> ExtraBold
           ),
         ),
       ),
@@ -121,8 +121,9 @@ class AppTheme {
         bodyColor: Colors.white, // High Contrast (was white70)
         displayColor: _primary, 
       ).copyWith(
-         titleLarge: const TextStyle(fontFamily: 'Outfit', letterSpacing: -0.5, fontSize: 22, fontWeight: FontWeight.w500), 
-         bodyMedium: const TextStyle(fontFamily: 'Outfit', letterSpacing: 0.2),
+         titleLarge: const TextStyle(fontFamily: 'Outfit', letterSpacing: -0.5, fontSize: 22, fontWeight: FontWeight.w600), // w500 -> w600
+         bodyMedium: const TextStyle(fontFamily: 'Outfit', letterSpacing: 0.2, fontWeight: FontWeight.w500), // Normal -> Medium
+         bodyLarge: const TextStyle(fontFamily: 'Outfit', fontWeight: FontWeight.w500), // Ensure body text is readable
       ),
       cardTheme: CardThemeData(
         elevation: 0,
@@ -141,7 +142,7 @@ class AppTheme {
           fontFamily: 'Outfit',
           color: Colors.white,
           fontSize: 24, 
-          fontWeight: FontWeight.w800, 
+          fontWeight: FontWeight.w900, // ExtraBold -> Black
         ),
         iconTheme: IconThemeData(color: Colors.white),
       ),
@@ -174,7 +175,7 @@ class AppTheme {
           textStyle: const TextStyle(
             fontFamily: 'Outfit',
             fontSize: 16,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w800, // Bold -> ExtraBold
           ),
         ),
       ),
